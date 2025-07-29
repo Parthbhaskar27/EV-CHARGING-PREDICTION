@@ -2,25 +2,25 @@
 ## Introduction
 
 ### Market at a Glance
-Climate change, including concerns about rising greenhouse gas emissions, has become an increasingly pressing concern among officials in the United States and around the world over the past several years. According to the U.S. Environmental Protection Agency (EPA), "greenhouse gas (GHG) emissions from transportation account for about 29 percent of total U.S. greenhouse gas emissions, making it the largest contributor of U.S. GHG emissions."[¹](https://www.epa.gov/transportation-air-pollution-and-climate-change/carbon-pollution-transportation) In light of these findings and the research being conducted around this issue, President Joe Biden and his administration are working on passing a [bipartisan infrastructure deal](https://www.whitehouse.gov/briefing-room/statements-releases/2021/06/24/fact-sheet-president-biden-announces-support-for-the-bipartisan-infrastructure-framework/) that would prioritize clean energy and support the development of a nationwide network of electric vehicle chargers.
+Climate change, including concerns about rising greenhouse gas emissions, has become an increasingly pressing concern among officials in the United States and around the world over the past several years. According to the U.S. Environmental Protection Agency (EPA), "greenhouse gas (GHG) emissions from transportation account for about 29 percent of total U.S. greenhouse gas emissions, making it the largest contributor of U.S. GHG emissions.) In light of these findings and the research being conducted around this issue, President Joe Biden and his administration are working on passing a [bipartisan infrastructure deal that would prioritize clean energy and support the development of a nationwide network of electric vehicle chargers.
 
-In addition to large scale policy proposals at the national level, some states are also taking action on their own. For example, both California and Washington are working towards mandating electric vehicles by 2035 and 2030 respectively in an effort to phase out vehicles that use gasoline. Furthermore, within the private sector, several major car manufacturers (such as Ford, GM, Volvo, etc.) have [announced](https://www.caranddriver.com/news/g35562831/ev-plans-automakers-timeline/) that they will be going fully electric in the next decade, which would prove to be a significant change in the auto industry. Taken together, if implemented, these changes in both the public and private sectors would cause a massive increase in demand for electric vehicles (EVs). The question is: how will the current charging infrastructure of these states support an influx in demand for new EVs? 
+In addition to large scale policy proposals at the national level, some states are also taking action on their own. For example, both California and Washington are working towards mandating electric vehicles by 2035 and 2030 respectively in an effort to phase out vehicles that use gasoline. Furthermore, within the private sector, several major car manufacturers (such as Ford, GM, Volvo, etc.) have [announced]that they will be going fully electric in the next decade, which would prove to be a significant change in the auto industry. Taken together, if implemented, these changes in both the public and private sectors would cause a massive increase in demand for electric vehicles (EVs). The question is: how will the current charging infrastructure of these states support an influx in demand for new EVs? 
 
 ### Business Case
-To be able to achieve a fully electric future and keep up with the demand for chargers, the charging infrastructure has to be expanded. Therefore, the Washington Department of Transportation is planning to spend $8 million on charging infrastructure projects between July 1st, 2021 and June 30, 2023[²](https://wsdot.wa.gov/business/innovative-partnerships/zero-emission-vehicle-infrastructure-partnerships). This is a great business opportunity for EV charging companies. By investing in Washington state, not only would these companies be eligible for government funding, but they would also put themselves in a profitable position as the demand for chargers continues to increase over the coming years. 
+To be able to achieve a fully electric future and keep up with the demand for chargers, the charging infrastructure has to be expanded. Therefore, the Washington Department of Transportation is planning to spend $8 million on charging infrastructure projects between July 1st, 2021 and June 30, 2023[²]. This is a great business opportunity for EV charging companies. By investing in Washington state, not only would these companies be eligible for government funding, but they would also put themselves in a profitable position as the demand for chargers continues to increase over the coming years. 
 
 ### Business Problem & Goal
 In order to position these chargers strategically, it is vital to model and predict the demand for electric vehicles in each county in Washington. In an effort to find counties that will have the most demand with the least amount of chargers, this analysis focuses on time series modeling of the amount of electric vehicles in the top 10 counties within Washington with the most purchases of new electric vehicles. Our goal was to recommend top 3 counties to invest in.
 
-&nbsp;
+
 
 ## Data
 
-We used Washington State's API to collect [electric vehicle title and registration activity data](https://data.wa.gov/Transportation/Electric-Vehicle-Title-and-Registration-Activity/rpr4-cgyd) which included a total of 433,172 transactions (91,255 new vehicle transactions). 
+We used Washington State's API to collect [electric vehicle title and registration activity data] which included a total of 433,172 transactions (91,255 new vehicle transactions). 
 
-Additionally, to be able to compare future EV demand to existing charging infrastructure, we used National Renewable Energy Laboratory's API. The [current charging station data](https://developer.nrel.gov/docs/transportation/alt-fuel-stations-v1/all/) we received from this API had 1,686 charging stations for the state of Washington.
+Additionally, to be able to compare future EV demand to existing charging infrastructure, we used National Renewable Energy Laboratory's API. The [current charging station data] we received from this API had 1,686 charging stations for the state of Washington.
 
-&nbsp;
+
 
 ## Method
 
@@ -37,29 +37,28 @@ When we found forecasts that were not accurate, we iterated on different train/t
 ## Results    
 
 ### Amount of Electric Vehicles on the Road in Washington State
-<img src="images/output_103_0.png">
+
 
 >As we can see above, the amount of electric vehicles on Washington State roads have been increasing exponentially over the past 10 years. On a high level, this confirms that Washington State has the necessary demand trend for electric vehicles to make investing in it profitable for an EV charging company. 
 
-&nbsp;
+
 
 ### Electric Vehicles on the Road Over Time by County
 
 Now that we looked at the statewide trend, we can start looking at individual counties. Since we have limited time for this analysis, we will be limiting our analysis to the top 10 counties that had the most electric vehicle purchases in the past 10 years.
     
-<img src="images/output_110_0.png">
+
 
 > Here, we can see that out of the top 10 most EV purchasing counties, King County has been growing much faster compared to others. This is expected since King County includes Seattle, which is the largest city by population in Washington State. Due to the scale differences between King County and the other 9 counties, it is difficult to see how these 9 counties compare to each other.
 
-&nbsp;
 
 ### Electric Vehicles on the Road Over Time (Excluding King County)
     
-<img src="images/output_113_1.png">
+
     
 > When King County is excluded, we can see that Snohomish County is leading the charge in electric vehicle purchases followed by Pierce and Clark County. 
 
-&nbsp;
+
 
 ### Most Purchased Car Models by County
 
@@ -69,7 +68,6 @@ Another important piece of information that can be relevant for an electric char
 - What kind of charging station to build (level 1, level 2, level 3)
 - Spacing of chargers based on the size of vehicles
 
-<img src="images/output_119_0.png">
     
 > Nissan Leaf and Tesla Model 3 are the most purchased vehicles in each of these counties. Nissan Leaf was released in December 2010 and is widely considered to be the first mass-market electric vehicle. Tesla's Model 3 is a relatively lower priced luxury electric vehicle that was designed to appeal to the mass market as well. Considering these factors, it is not surprising that these vehicles are the most purchased vehicles in each county.
 
@@ -77,7 +75,7 @@ Another important piece of information that can be relevant for an electric char
 
 ### Current Charging Station Counts by County
 
-<img src="images/charger_counts.png">
+
 
 > Above, we can see that King County has by far the most amount of chargers compared to other counties followed by Pierce and Snohomish. Refer to Appendix B for more information.
 
@@ -95,7 +93,7 @@ To sum up, the momentum behind electric vehicles - generated by the recent advan
 
 - King County has the most amount of chargers followed by Pierce County.
 
-&nbsp;
+
 
 ### Comparison of Counties
 <div>
