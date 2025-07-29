@@ -3,9 +3,6 @@
 
 > Image from: https://energytransition.org/wp-content/uploads/2017/11/Charging_station_MIA_09_2017_5954.jpg
 
-&nbsp;
-
-**For Tableau Dashboard** [click here](https://public.tableau.com/views/ElectricVehiclePredictionsandExistingChargingInfrastructureinWashingtonState/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link).
 
 <img src='images/dashboard_screenshot_072721.PNG'>
 
